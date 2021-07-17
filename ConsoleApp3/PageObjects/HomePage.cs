@@ -13,12 +13,8 @@ namespace ConsoleApp3.PageObjects
         //    //PageFactory.InitElements(driver, this);
         //}
 
-        //[FindsBy(How = How.CssSelector, Using = ".fusion-main-menu a[href*='about']")]
-        //private IWebElement about;
-
-        //[FindsBy(How = How.ClassName, Using = "fusion-main-menu-icon")]
-        //private IWebElement searchIcon;
-
+        
+        
         public void goToPage()
         {
             Driver.Navigate().GoToUrl("http://www.swtestacademy.com");
@@ -26,8 +22,8 @@ namespace ConsoleApp3.PageObjects
 
         public AboutPage goToAboutPage()
         {
-            //new FindsByAttribute().
-            var about = Driver.FindElement(By.CssSelector(".fusion-main-menu a[href*='about']"));
+            
+            var about = Driver.FindElement(By.LinkText("About"));
             about.Click();
             return new AboutPage();
         }

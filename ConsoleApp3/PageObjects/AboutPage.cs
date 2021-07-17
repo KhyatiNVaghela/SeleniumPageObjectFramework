@@ -24,25 +24,21 @@ namespace ConsoleApp3.PageObjects
         //private IWebElement searchText;
 
 
-        const string mainMenuSearchButtonLocator = "ul#menu-main li.fusion-main-menu-search a";
+        const string mainMenuSearchButtonLocator = "span.menu-bar-item";
 
-        const string searchTextElementLocator = ".fusion-custom-menu-item-contents input[class='s']";
+        const string searchTextElementLocator = "input.search-field";
         
         const string searchResultElementClickLocator = ".fusion-custom-menu-item-contents input.fusion-search-submit";
 
         public ResultPage search(string text)
         {
-            //ul#menu-main li.fusion-main-menu-search a
             var mainMenuSearchButtonElement = Driver.FindElement(By.CssSelector(mainMenuSearchButtonLocator));
             mainMenuSearchButtonElement.Click();
 
             var searchTextElement = Driver.FindElement(By.CssSelector(searchTextElementLocator));
             searchTextElement.SendKeys(text);
+            searchTextElement.SendKeys(Keys.Enter);
 
-            //wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("#sidebar .searchsubmit"))).Click();
-
-            var searchResultElementClickElement = Driver.FindElement(By.CssSelector(searchResultElementClickLocator));
-            searchResultElementClickElement.Click();
             return new ResultPage();
         }
     }

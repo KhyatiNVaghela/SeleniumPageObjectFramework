@@ -11,11 +11,8 @@ namespace ConsoleApp3.PageObjects
         //    this.driver = driver;
         //   // SeleniumExtras.PageObjects.PageFactory.InitElements(driver, this);
         //}
-
-        //[FindsBy(How = How.CssSelector, Using = "#posts-container>article:nth-child(1)")]
-        //private IWebElement firstArticle;
-
-        const string firstArticleLocator = ".fusion-posts-container>article:nth-child(1) h2";
+        
+        const string firstArticleLocator = "h2 a";
         public void clickOnFirstArticle()
         {
             var firstArticle = Driver.FindElement(By.CssSelector(firstArticleLocator)); //.fusion-posts-container>article:nth-child(1) .fusion-flexslider

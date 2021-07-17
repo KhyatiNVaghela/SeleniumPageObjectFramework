@@ -31,7 +31,7 @@ namespace ConsoleApp3.PageObjects
             options.AddArgument("start-maximized"); //driver.Manage().Window.Maximize();
             options.AddArgument("disable-notifications");
             //var driver = new ChromeDriver(Environment.CurrentDirectory, options);
-            driver = new ChromeDriver("C:\\Khyati\\Projects\\chromedriver_win32", options);
+            driver = new ChromeDriver("..\\..\\..\\Resources", options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
         }
