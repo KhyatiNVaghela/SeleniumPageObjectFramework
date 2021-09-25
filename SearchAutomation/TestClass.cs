@@ -6,18 +6,6 @@ namespace SearchAutomation
 {
     public class TestClass
     {
-        //private IWebDriver driver;
-
-        //[SetUp]
-        //public void SetUp()
-        //{
-            //driver = new ChromeDriver(); 
-        //    ChromeOptions options = new ChromeOptions();
-        //    options.AddArgument("start-maximized"); //driver.Manage().Window.Maximize();
-        //    options.AddArgument("disable-notifications");
-        //    //var driver = new ChromeDriver(Environment.CurrentDirectory, options);
-        //}
-
         [Test]
         public void SearchTextFromAboutPage()
         {

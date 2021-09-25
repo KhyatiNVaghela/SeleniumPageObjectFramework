@@ -4,7 +4,6 @@ namespace SearchAutomation.PageObjects
 {
     class HomePage : BasePageObject
     {
-
         public void goToPage()
         {
             Driver.Navigate().GoToUrl("http://www.swtestacademy.com");
@@ -12,7 +11,6 @@ namespace SearchAutomation.PageObjects
 
         public AboutPage goToAboutPage()
         {
-            
             var about = Driver.FindElement(By.LinkText("About"));
             about.Click();
             return new AboutPage();
